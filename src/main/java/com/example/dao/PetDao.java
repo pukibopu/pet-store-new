@@ -1,8 +1,11 @@
 package com.example.dao;
 
+import com.example.entity.Pet;
 import com.example.utils.JDBCUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.util.List;
 
 public class PetDao {
     private JdbcTemplate template=new JdbcTemplate(JDBCUtils.getDataSource());
