@@ -46,12 +46,13 @@
                     <span class="pet-tag">${tag}</span>
                 </c:forEach>
             </div>
-
+            <form action="AddCartServlet" method="get"></form>
             <p class="card-text">${pet.getDescription()}</p>
             <p>￥<span id="pet-price">${pet.getPrice()}</span></p>
             <p>库存 (<span id="pet-stock">${pet.getStock()}</span>)</p>
+            <input type="text" name="quantity" value="1">
             <nav>
-                <button class="btn btn-warning" type="button">加入购物车</button>
+                <button class="btn btn-warning" type="submit">加入购物车</button>
                 <button class="btn btn-warning" type="button">返回列表</button>
             </nav>
 
