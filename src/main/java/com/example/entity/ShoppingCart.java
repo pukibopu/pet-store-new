@@ -24,7 +24,10 @@ public class ShoppingCart {
 
     public double getTotalMoney(){
         double money = 0;
-
+        List<CartItem> list=this.getCartItemList();
+        for(CartItem item: list){
+            money+=item.getQuantity()*1.0* item.getPrice();
+        }
         return  money;
     }
 
