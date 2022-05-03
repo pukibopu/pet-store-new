@@ -16,10 +16,9 @@ public class AddCartServlet extends HttpServlet {
         ShoppingCart cart = (ShoppingCart) request.getSession().getAttribute("cart");
         if (cart == null){
             cart = new ShoppingCart();
+            request.getSession().setAttribute("cart",cart);
         }
-
         cart.add(id,quantity);
-        request.getSession().setAttribute("cart",cart);
         request.getRequestDispatcher("/showCart").forward(request,response);
 
     }

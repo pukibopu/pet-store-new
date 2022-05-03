@@ -65,6 +65,13 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.3.17</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
 
         <!-- JSTL 第三方jar包
         https://blog.csdn.net/haolongabc/article/details/50378611  -->

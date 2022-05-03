@@ -9,10 +9,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-    List<Pet> petList= new PetDao().getList();
-    request.getSession().setAttribute("petList",petList);
-%>
 <%@include file="header.jsp"  %>
 <div class="container">
     <div class="card-deck mb-3 text-center">
