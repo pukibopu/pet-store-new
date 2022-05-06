@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="styles/bootstrap4.3.1.css" >
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="javascript/jquery-2.0.0.min.js"></script>
+    <script src="javascript/remove-item.js"></script>
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">

@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                 <c:forEach items="${cart.getCartItemList()}" var="item">
-                <tr>
+                <tr id="${item.getId()}">
 
                         <td>
                             <input type="checkbox" name="" value="" checked="checked">
@@ -38,14 +38,14 @@
                         <td>
                             <input type="text" class="form-control" name="quantity" value="${item.getQuantity()}">
                         </td>
-                        <td>X</td>
+                        <td><a href="javascript:doRequest(${item.getId()});">X</a></td>
                 </tr>
                 </c:forEach>
                 </tbody>
             </table>
         </div>
         <div class="card-footer">
-            总计: <div class="pull-right">¥ ${cart.getTotalMoney()}</div>
+            总计: <div class="pull-right">¥ <span id="total-money">${cart.getTotalMoney()}</span> </div>
             <button class="btn btn-warning  pull-right">立即结算</button>
         </div>
     </div>

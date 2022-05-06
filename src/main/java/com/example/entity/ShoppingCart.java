@@ -52,6 +52,11 @@ public class ShoppingCart {
     }
 
     public void remove(int id){
-
+        for(CartItem item: this.cartItemList){
+            if(item.getId()==id){
+                this.cartItemList.remove(item);
+                break;
+            }
+        }
     }
 }
