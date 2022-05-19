@@ -36,7 +36,7 @@
                             <span class="p-price"> ¥ ${item.getPrice()}</span>
                         </td>
                         <td>
-                            <input type="text" class="form-control" name="quantity" value="${item.getQuantity()}">
+                            <input type="text" class="form-control quan" value="${item.getQuantity()}">
                         </td>
                         <td><a href="javascript:doRequest(${item.getId()});">X</a></td>
                 </tr>
@@ -50,4 +50,24 @@
         </div>
     </div>
 </div>
+<script lang="js">
+    $(function () {
+        $('.quan').change(function (){
+            const datas={
+                id:$(this).parents('tr').attr('id'),
+                quantity:$(this).val()
+            }
+            $.ajax({
+                type: 'post',
+                url: 'changeQuan',
+                data:datas,
+                success:(resp)=>{
+                    $('#total-money').text(resp)
+                }
+
+            })
+
+        })
+    })
+</script>
 <%@ include file="footer.jsp"%>

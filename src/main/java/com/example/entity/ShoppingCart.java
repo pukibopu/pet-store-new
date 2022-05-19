@@ -20,6 +20,15 @@ public class ShoppingCart {
         this.cartItemList = cartItemList;
     }
 
+    public void ChangeQuantity(int id,int quantity){
+        for (CartItem item:
+                this.cartItemList) {
+            if (item.getId() == id){
+                item.setQuantity(quantity);
+                break;
+            }
+        }
+    }
 
 
     public double getTotalMoney(){
@@ -46,7 +55,7 @@ public class ShoppingCart {
                 break;
             }
         }
-        if(foundFlag == false){
+        if(!foundFlag){
             this.cartItemList.add(cartItem);
         }
     }
